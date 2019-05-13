@@ -1,0 +1,85 @@
+.head {
+  background: #1f2532;
+}
+.head .container .navbar {
+  background: rgba(61, 77, 112, 0.3);
+  border: none;
+}
+.head .container .navbar ul.nav li.open a {
+  background: none;
+}
+.head .container .navbar ul.nav li a {
+  color: #707d8f;
+}
+.head .container .navbar ul.nav li a:hover {
+  background: none;
+  color: #f0326b;
+}
+.head .container .row img {
+  width: 100%;
+}
+.head .container .row .h1 {
+  color: white;
+}
+.head .container .row p {
+  margin-top: 60px;
+  color: white;
+}
+.head .container .row a {
+  color: white;
+  border: none;
+  background: #fe2a77;
+}
+.conter {
+  background: rgba(0, 0, 0, 0.2);
+  margin-top: 20px;
+}
+.conter h3 {
+  font-weight: bold;
+  position: relative;
+}
+.conter h3::before {
+  content: '';
+  display: block;
+  background: red;
+  width: 50px;
+  height: 2px;
+  position: absolute;
+  left: -70px;
+  top: 20px;
+}
+.conter p {
+  margin-top: 10px;
+}
+.conter-2 {
+  background: rgba(0, 0, 0, 0.4);
+  margin-top: 30px;
+  font-size: 20px;
+  text-align: center;
+}
+.conter-2 .bix {
+  text-align: center!important;
+}
+.conter-2 .bix span {
+  color: red;
+  margin-top: 10px;
+}
+.conter-2 .bix h3 {
+  font-weight: bold;
+  margin: 10px;
+}
+.conter-2 .bix p {
+  color: rgba(0, 0, 0, 0.5);
+}
+.conter-3 {
+  margin-top: 30px;
+}
+.conter-3 .thumbnail {
+  margin: auto;
+}
+.conter-3 .thumbnail img {
+  width: 100%;
+}
+.conter-3 .bix {
+  float: left;
+}

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			
+			.outer{
+				width: 400px;
+				height: 300px;
+				margin: 0 auto;
+				margin-top: 100px;
+				position: relative;
+			}
+			.outer img {
+				width: 200px;
+				height: 150px;
+				float: left;
+				max-width: 400px;
+			}
+			.box {
+				width: 405px;
+				height: 305px;
+				margin: 0 auto;
+				margin-top: 15px;
+				/*background: lightblue;*/
+				/*float: left;*/
+				/*position: relative;*/
+			}
+			.box {
+				width: 410px;
+				height: 310px;
+				position: relative;
+				/*top: -300px;*/
+				display: none;
+				/*background: lightblue;*/
+			}
+			.box i {
+				width: 200px;
+				height: 150px;
+				float: left;
+				margin: 2px;
+				background-image: url(img/01.jpg);
+				background-size: 410px 310px;
+			}
+			.box i:nth-child(1) {
+				background-position: left top;
+			}
+			.box i:nth-child(2) {
+				background-position: right top;
+			}
+			.box i:nth-child(3) {
+				background-position: left bottom;
+			}
+			.box i:nth-child(4) {
+				background-position: right bottom;
+			}
+
+</style>
+	</head>
+	<body>
+
+		
+		<div class="outer">
+			<img src="img/01.jpg"/>
+
+			<img src="img/02.jpg"/>
+			<img src="img/03.jpg"/>
+			<img src="img/04.jpg"/>
+		</div>
+		<div class="box">
+			<i></i>
+			<i></i>
+			<i></i>
+			<i></i>
+		</div>
+		
+	</body>
+	<script type="text/javascript">
+		var Outer = document.querySelector('.outer')
+		var Box = document.querySelector('.box')
+		var imgs = document.querySelectorAll('.outer img')
+		var ls = document.querySelectorAll('.box i')
+		//点击图片，让box里面的i显示出来,鼠标移除就隐藏box
+		for (var i = 0; i < imgs.length; i++) {
+			imgs[i].onclick = function () {
+			Box.style.display = 'block'
+			for (var j = 0; j < ls.length; j++) {
+				ls[j].style.backgroundImage = 'url(' + this.src + ')'
+				}
+			}
+				//鼠标移出隐藏
+			imgs[i].onmouseout = function () {
+				Box.style.display = 'none'
+			}
+		}
+	</script>
+</html>
